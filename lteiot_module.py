@@ -156,15 +156,6 @@ class LTEIoT:
 				return self.response # returns the response of the command as string.
 				break
 
-	# Function for saving conf. and reset BG96_AT module
-	def resetModule(self):
-		self.saveConfigurations()
-		delay(200)
-		self.disable()
-		delay(200)
-		self.enable()
-		self.powerUp()
-
 	# Function for save configurations that be done in current session. 
 	def saveConfigurations(self):
 		self.sendATComm("AT&W","OK\r\n")
